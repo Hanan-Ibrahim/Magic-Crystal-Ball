@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SlV-ia-hVW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Magic Crsytal Ball Controller-->
+        <scene sceneID="s4R-33-19r">
+            <objects>
+                <viewController id="SlV-ia-hVW" customClass="MagicCrsytalBallController" customModule="Magic_Crystal_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZc-go-6o1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSm-x2-Ha1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="XkO-cW-eh0">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Got questions?" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92V-nZ-Gui">
+                                        <rect key="frame" x="78" y="250" width="258" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crystal" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-Fg-QpW">
+                                        <rect key="frame" x="-42" y="328" width="498" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="TK1-jX-iQj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx3-VT-awu">
+                                        <rect key="frame" x="158.5" y="430" width="97" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cq-6M-9V7">
+                                        <rect key="frame" x="174.5" y="580" width="65" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Ask">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="askButtonPressed:" destination="SlV-ia-hVW" eventType="touchUpInside" id="PfR-QJ-6cJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="cGw-Fg-QpW" firstAttribute="centerY" secondItem="XkO-cW-eh0" secondAttribute="centerY" id="0bO-yE-8F5"/>
+                                    <constraint firstItem="XkO-cW-eh0" firstAttribute="leading" secondItem="vSm-x2-Ha1" secondAttribute="leading" id="4WN-eC-rB5"/>
+                                    <constraint firstItem="0cq-6M-9V7" firstAttribute="firstBaseline" secondItem="cGw-Fg-QpW" secondAttribute="baseline" constant="56" symbolType="layoutAnchor" id="Bcd-3q-xpQ"/>
+                                    <constraint firstItem="cx3-VT-awu" firstAttribute="centerX" secondItem="vSm-x2-Ha1" secondAttribute="centerX" id="H4O-FV-ElI"/>
+                                    <constraint firstItem="0cq-6M-9V7" firstAttribute="centerX" secondItem="cx3-VT-awu" secondAttribute="centerX" id="HOU-bS-5Nm"/>
+                                    <constraint firstItem="92V-nZ-Gui" firstAttribute="centerX" secondItem="XkO-cW-eh0" secondAttribute="centerX" id="J64-B2-CqP"/>
+                                    <constraint firstItem="cGw-Fg-QpW" firstAttribute="centerX" secondItem="XkO-cW-eh0" secondAttribute="centerX" id="Jvy-lw-1yv"/>
+                                    <constraint firstItem="XkO-cW-eh0" firstAttribute="top" secondItem="vSm-x2-Ha1" secondAttribute="top" id="OP2-Ss-KVH"/>
+                                    <constraint firstItem="cx3-VT-awu" firstAttribute="centerY" secondItem="vSm-x2-Ha1" secondAttribute="centerY" id="QFD-ml-i3g"/>
+                                    <constraint firstItem="cGw-Fg-QpW" firstAttribute="top" secondItem="92V-nZ-Gui" secondAttribute="bottom" constant="30" id="c9q-OS-dYR"/>
+                                    <constraint firstAttribute="bottom" secondItem="XkO-cW-eh0" secondAttribute="bottom" id="lAz-mc-Npf"/>
+                                    <constraint firstAttribute="trailing" secondItem="XkO-cW-eh0" secondAttribute="trailing" id="zOw-Tz-dNM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hlr-kI-2Cn" firstAttribute="top" secondItem="vSm-x2-Ha1" secondAttribute="top" constant="44" id="AMP-ai-ywn"/>
+                            <constraint firstItem="vSm-x2-Ha1" firstAttribute="bottom" secondItem="hlr-kI-2Cn" secondAttribute="bottom" constant="34" id="FeK-jj-ZSN"/>
+                            <constraint firstItem="hlr-kI-2Cn" firstAttribute="trailing" secondItem="vSm-x2-Ha1" secondAttribute="trailing" id="HCe-9a-dez"/>
+                            <constraint firstItem="vSm-x2-Ha1" firstAttribute="leading" secondItem="hlr-kI-2Cn" secondAttribute="leading" id="UWU-b7-Tqa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hlr-kI-2Cn"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="cx3-VT-awu" id="pGY-nQ-rdL"/>
+                        <outlet property="askButton" destination="0cq-6M-9V7" id="JLp-Kz-7lK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pu-V1-WTw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="213.5" height="378.5"/>
+        <image name="crystal" width="249" height="258"/>
+    </resources>
+</document>
